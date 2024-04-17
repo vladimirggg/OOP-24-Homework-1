@@ -16,14 +16,19 @@ public:
     MultiSet(unsigned int n, unsigned int k);
     MultiSet(const MultiSet& other);
     MultiSet& operator= (const MultiSet& other);
+
     void add(unsigned int number);
     uint8_t occurrenceCount(unsigned int number) const;
+
     void printNumbers() const;
     void printMultiSetInMemory() const;
+
     void serialize(const char* fileName) const; // out
     void deserialize(const char* fileName); // in
+
     MultiSet intersection(const MultiSet& other) const;
     MultiSet difference(const MultiSet& other) const;
     MultiSet fillInMultiSet() const;
+    
     ~MultiSet();
 };
