@@ -18,6 +18,7 @@ MultiSet::MultiSet(): numberSet(nullptr), bucketSize(0), maxNumber(0){}
 
 MultiSet::MultiSet(unsigned int n, unsigned int k) : maxNumber(n) {
     if(k < 1 || k > 8) throw std::out_of_range("K out of bounds!");
+    // No need to free up memory
     else bucketSize = k;
     const size_t arraySize = getArraySize(); // 8 bit rounded up
     numberSet = new uint8_t[arraySize]; // round up
